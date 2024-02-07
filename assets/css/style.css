@@ -1,3 +1,13 @@
+/*Asterisk wildcard selector to override default styles added by the browser */
+
+/*the * applies style to everything */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* when we apply a height to our boxes it will be applied to everything including our border */
+}
+
 header{
     background-color: lightcoral;
 }
