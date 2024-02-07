@@ -8,12 +8,25 @@
     box-sizing: border-box; /* when we apply a height to our boxes it will be applied to everything including our border */
 }
 
-header{
-    background-color: lightcoral;
+/* General Styles*/
+body{
+    min-height: 100vh; /* allows it to stretch higher than the browser page when there is enough height to do so */
+
+    display: flex;
+    flex-direction: column;
+
+    /*generic project styles*/
+    color: #3a3a3a;
 }
+
 
 main{
     background-color: lightblue;
+
+    /*Make main element take up any surplus space to push footer down */
+    
+    flex: 1 0 auto;
+
 }
 
 footer {
