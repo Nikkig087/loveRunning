@@ -108,3 +108,30 @@ main{
 footer {
     background-color: orange;
 }
+
+/*Media query: tablets and larger (768px and up) */
+@media screen  and (min-width) {
+
+    /*Header*/
+    nav{
+        display: block;
+        position: relative;  /* to put in back inside header*/
+        box-shadow: none;
+        width: fit-content;  /* So it doesnt take up all the header*/
+        padding-right: 1rem;
+    }
+
+    #menu{
+        display: flex; /* puts links in a row */
+    }
+
+    #menu li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    
+}
