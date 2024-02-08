@@ -24,7 +24,12 @@ body{
 }
 
 header {
-    background-color: lightcoral;
+    background-color: #ffffff;
+    padding:0 1rem; /*stops text from sticking to side*/
+    position: fixed; /*so it waits at top*/
+    z-index: 99; /* so it waits on top of any other items with a z index */
+    width: 100%; /*to fit width of screen*/
+    box-shadow: 0 2px 2px #3a3a3a;
 }
 
 h1{
