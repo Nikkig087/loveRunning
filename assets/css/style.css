@@ -31,7 +31,7 @@ header {
     width: 100%; /*to fit width of screen*/
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;/*make flex items show in a row*/
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;/* align items vertically*/
 }
 
@@ -47,13 +47,13 @@ h1{
     color: #252525;
 }
 
-#menu{
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
 
-menu li {
+menu > li {
     margin-bottom: 1em;
 }
 
@@ -63,7 +63,7 @@ menu li {
 
 /* Navbar Styles with dropdown toggle*/
 
-nav{
+nav {
     position: absolute; /*Absolute positioning takes an element outside the normal
     flow of the page structure.
     It is positioned relative to the nearest positioned ancestor
@@ -110,7 +110,7 @@ footer {
 }
 
 /*Media query: tablets and larger (768px and up) */
-@media screen  and (min-width) {
+@media screen  and (min-width:768px) {
 
     /*Header*/
     nav{
@@ -125,7 +125,7 @@ footer {
         display: flex; /* puts links in a row */
     }
 
-    #menu li {
+    #menu > li {
         padding-left: 1rem;
     }
 
@@ -144,5 +144,12 @@ footer {
         /* Push main content down to accomodate larger header */
         margin-top: 79px;
 
+    }
+}
+
+@media screen and (min-width:992px){
+
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
     }
 }
