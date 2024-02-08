@@ -58,6 +58,21 @@ menu li {
     border-bottom: 1px solid #3a3a3a;
 }
 
+/* Navbar Styles with dropdown toggle*/
+
+nav{
+    position: absolute; /*Absolute positioning takes an element outside the normal
+    flow of the page structure.
+    It is positioned relative to the nearest positioned ancestor
+    in our case, the header.*/
+
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+}
 main{
     background-color: lightblue;
 
