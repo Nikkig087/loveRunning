@@ -105,8 +105,22 @@ main{
 
 }
 
-footer {
-    background-color: orange;
+/*Footer*/
+#social-networks{
+    text-align: center; /*as our icons are basically our font, this will center them */
+    padding: 20px 0; /*Add vertical breathing space above and below icons */
+    display: flex; /*space our icons evenly along the footer */
+    justify-content: space-evenly;
+    list-style-type: none; /*gets rid of bullets beside icons */
+}
+
+/* Font Awesom uses i class for icons so we need to style the icons so we target the i's that are direct desendants of the social-networks */
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+
 }
 
 /*Media query: tablets and larger (768px and up) */
