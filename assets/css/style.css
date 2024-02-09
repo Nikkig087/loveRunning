@@ -23,6 +23,14 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+h1, h2, h3 {
+    font-family:'Oswald',sans-serif ;
+    text-transform: uppercase;
+    letter-spacing: 2px;/*provides breathing space between letters*/
+    color: #252525;
+}
+
+
 header {
     background-color: #ffffff;
     padding:0 1rem; /*stops text from sticking to side*/
@@ -40,12 +48,7 @@ header a {
     color: inherit; /*takes color from body*/
 }
 
-h1{
-    font-family:'Oswald',sans-serif ;
-    text-transform: uppercase;
-    letter-spacing: 2px;/*provides breathing space between letters*/
-    color: #252525;
-}
+
 
 #menu {
     font-size: 110%;
@@ -110,10 +113,34 @@ main{
     height: 600px;
     width: 100%;
     background:url("../images/hero-image.webp") no-repeat center center/cover;
+    
 
     /*we dont want it to repeat, we want to center it horizontally and vertically and we want it to auto size itself to cover the hero section without distoring*/ 
 
+    position: relative;
+
 }
+
+#cover-text {
+    background-color:rgba(241, 109, 107, .7) ;
+    /*.7 is the opacity to semi-transparent */
+
+    font-size: 130%;
+    position: absolute; /* it will be relative to hero section */
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px; /* so text doesnt stick to top of the cover-text div */
+    padding-left: 10px;
+
+
+}
+/* any h2 and h3 that are direct decendants of the cover text */
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
+}
+
+
 /*Footer*/
 #social-networks{
     text-align: center; /*as our icons are basically our font, this will center them */
@@ -168,6 +195,13 @@ main{
         margin-top: 79px;
 
     }
+
+      /*Hero*/
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+
 }
 
 @media screen and (min-width:992px){
