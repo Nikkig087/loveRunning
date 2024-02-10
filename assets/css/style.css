@@ -173,6 +173,12 @@ main{
     margin: 5px 0;
 }
 
+#circle-cover-bg{
+    background:url("../images/reasons-image.webp") no-repeat center center/cover;
+    border-radius: 50%; /*this makes background image a circle */
+    min-width: 300px;
+    min-height: 300px;
+}
 /*Footer*/
 #social-networks{
     text-align: center; /*as our icons are basically our font, this will center them */
