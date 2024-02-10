@@ -174,10 +174,20 @@ main{
 }
 
 #circle-cover-bg{
-    background:url("../images/reasons-image.webp") no-repeat center center/cover;
+    background:url("../images/reasons-image.webp") no-repeat top center/cover;
     border-radius: 50%; /*this makes background image a circle */
-    min-width: 300px;
-    min-height: 300px;
+    width: 90vw;
+    height: 90vw;
+    margin-bottom: 20px;
+    max-width: 300px; /*image will never be anymore*/
+    max-height: 300px; /*image will never be anymore*/
+}
+
+/*put image in center of screen for mobile */
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*Footer*/
 #social-networks{
