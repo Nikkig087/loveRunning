@@ -12,6 +12,7 @@
 }
 
 /* General Styles*/
+
 body{
     min-height: 100vh; /* allows it to stretch higher than the browser page when there is enough height to do so */
 
@@ -30,7 +31,12 @@ h1, h2, h3 {
     color: #252525;
 }
 
+/* we want to keep heading so that its available to search engines but we dont want to show it on our page, we use a class so it can be reused anytime*/
 
+.hidden-heading {
+    display: none;
+
+}
 header {
     background-color: #ffffff;
     padding:0 1rem; /*stops text from sticking to side*/
