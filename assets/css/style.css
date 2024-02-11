@@ -195,6 +195,8 @@ main{
     align-items: center;
     justify-content: center;
 }
+
+/*Fully responsive meetup times section without media query */
 #times {
     background: url(../images/dublin-city.webp) no-repeat center center/cover;
     display: flex;
