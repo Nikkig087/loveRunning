@@ -189,6 +189,13 @@ main{
     align-items: center;
     justify-content: center;
 }
+
+#meetups {
+    width: 90%;
+   
+    margin: 20px auto;
+
+}
 /*Footer*/
 #social-networks{
     text-align: center; /*as our icons are basically our font, this will center them */
