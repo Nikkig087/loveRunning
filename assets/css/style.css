@@ -225,6 +225,27 @@ main{
     color: #fafafa;
 }
 
+/*Gallery Page */
+
+#photos img {
+    width: 100%; /*stops images overflowing to side */
+    line-height: 1em;
+}
+
+/*By default, the images in here are inline elements, which are treated like text.
+Text has an automatic line height to vertically space out the lines,
+which is causing this white space.
+
+So to fix that, we'll set the line-height on the photos div to 0, and now when we
+go back to the preview, that line is gone.
+*/
+
+#photos {
+ line-height: 0;
+}
+
+
+
 /*Footer*/
 #social-networks{
     text-align: center; /*as our icons are basically our font, this will center them */
