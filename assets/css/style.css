@@ -227,6 +227,7 @@ main{
 
 /*Gallery Page */
 
+/*we need a media query to change this on larger screens otherwise the images will be very big on large screens */
 #photos img {
     width: 100%; /*stops images overflowing to side */
     line-height: 1em;
@@ -236,7 +237,7 @@ main{
 Text has an automatic line height to vertically space out the lines,
 which is causing this white space.
 
-So to fix that, we'll set the line-height on the photos div to 0, and now when we
+0So to fix that, we'll set the line-height on the photos div to 0, and now when we
 go back to the preview, that line is gone.
 */
 
@@ -263,6 +264,18 @@ go back to the preview, that line is gone.
     color: #3a3a3a;
 
 }
+
+/*Media query: large or landscape phones (576px and up) */
+@media screen  and (min-width:576px){
+    #photos {
+        column-count: 2; /*this property tells the browser to display the content
+        of the selected element in columns.
+        The value we give it, indicates how many columns should be used. */
+
+        column-gap: 0; /*we dont want a gap */
+    }
+}
+
 
 /*Media query: tablets and larger (768px and up) */
 @media screen  and (min-width:768px) {
@@ -327,6 +340,10 @@ go back to the preview, that line is gone.
         align-self: flex-end;
     }
 
+    #photos {
+        column-count: 3;
+    }
+
 }
 
 
@@ -334,6 +351,10 @@ go back to the preview, that line is gone.
 
     #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    #photos {
+        column-count: 4;
     }
 }
 
@@ -365,4 +386,6 @@ go back to the preview, that line is gone.
     #benefits-physical > div {
         align-self: flex-end;
     }
+
+   
 }
