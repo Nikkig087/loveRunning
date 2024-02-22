@@ -1,60 +1,51 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/*Asterisk wildcard selector to override default styles added by the browser */
-
-/*the * applies style to everything */
-
-*{
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /* when we apply a height to our boxes it will be applied to everything including our border */
+    box-sizing: border-box;
 }
 
-/* General Styles*/
-
-body{
-    min-height: 100vh; /* allows it to stretch higher than the browser page when there is enough height to do so */
-
+/* General styles */
+body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    /*generic project styles*/
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3 {
-    font-family:'Oswald',sans-serif ;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px;/*provides breathing space between letters*/
+    letter-spacing: 2px;
     color: #252525;
 }
 
-/* we want to keep heading so that its available to search engines but we dont want to show it on our page, we use a class so it can be reused anytime*/
-
 .hidden-heading {
     display: none;
-
 }
+
+/* Header */
 header {
     background-color: #ffffff;
-    padding:0 2rem; /*stops text from sticking to side*/
-    position: fixed; /*so it waits at top*/
-    z-index: 99; /* so it waits on top of any other items with a z index */
-    width: 100%; /*to fit width of screen*/
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    display: flex;/*make flex items show in a row*/
+    display: flex;
     justify-content: space-between;
-    align-items: baseline;/* align items vertically*/
+    align-items: baseline;
 }
 
 header a {
     text-decoration: none;
-    color: inherit; /*takes color from body*/
+    color: inherit;
 }
-
-
 
 #menu {
     font-size: 110%;
@@ -62,7 +53,7 @@ header a {
     list-style-type: none;
 }
 
-menu > li {
+#menu > li {
     margin-bottom: 1em;
 }
 
@@ -70,184 +61,147 @@ menu > li {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Navbar Styles with dropdown toggle*/
-
+/* Navbar styles with dropdown toggle */
 nav {
-    position: absolute; /*Absolute positioning takes an element outside the normal
-    flow of the page structure.
-    It is positioned relative to the nearest positioned ancestor
-    in our case, the header.*/
-
+    position: absolute;
     background-color: #ffffff;
     width: 100%;
     left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
-    top: 100%; /*the top of the element should start at the bottom of its parent */
+    top: 100%;
 }
 
-/*Nav toggle */
-
-/* ~ indicates we want to target the adjoining element */
-
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
 
-/*remove checkbox*/
-#nav-toggle{ 
+#nav-toggle {
     display: none;
 }
 
-.nav-toggle-label{
+.nav-toggle-label {
     font-size: 2rem;
 }
 
-main{
-   
-
-    /*Make main element take up any surplus space to push footer down */
-    
+/* Main content */
+main {
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
+    /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
-   
-
 }
 
-/*Hero Section */
+/* Hero section */
 #hero {
     height: 600px;
     width: 100%;
-    background:url("../images/hero-image.webp") no-repeat center center/cover;
-    
-
-    /*we dont want it to repeat, we want to center it horizontally and vertically and we want it to auto size itself to cover the hero section without distoring*/ 
-
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
-
 }
 
 #cover-text {
-    background-color:rgba(241, 109, 107, .7) ;
-    /*.7 is the opacity to semi-transparent */
-
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
-    position: absolute; /* it will be relative to hero section */
+    position: absolute;
     bottom: 30px;
     width: 80%;
     min-height: 200px;
-    padding-top: 40px; /* so text doesnt stick to top of the cover-text div */
+    padding-top: 40px;
     padding-left: 10px;
-
-
 }
-/* any h2 and h3 that are direct decendants of the cover text */
+
 #cover-text > h2, #cover-text > h3 {
     color: #ffffff;
 }
 
+/* Reasons section */
 #reasons {
     width: 90%;
-   
     margin: 20px auto;
-
 }
 
-#reasons  h2{
-    font-size: 280%;
+#reasons h2 {
     margin-bottom: 20px;
     text-align: center;
+    font-size: 280%;
 }
 
-
-  
-
-#benefits-physical > div, #benefits-mental > div {
+#benefits-physical > div,
+#benefits-mental > div {
     line-height: 20px;
     margin-bottom: 20px;
-
 }
 
- 
-
-#benefits  p {
+#benefits p {
     padding: 0 20px;
 }
 
-#benefits  hr {
+#benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
 
-#circle-cover-bg{
-    background:url("../images/reasons-image.webp") no-repeat top center/cover;
-    border-radius: 50%; /*this makes background image a circle */
-    width: 90vw;
+#circle-cover-bg {
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
+    width: 90vw;
     margin-bottom: 20px;
-    max-width: 300px; /*image will never be anymore*/
-    max-height: 300px; /*image will never be anymore*/
+    /* Makes the square image into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
 }
 
-/*put image in center of screen for mobile */
 #benefits-image {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/*Fully responsive meetup times section without media query */
+/* Meetup Times section */
 #times {
-    background: url(../images/dublin-city.webp) no-repeat center center/cover;
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
     display: flex;
-    flex-wrap: wrap; /*make the text wrap */
+    flex-wrap: wrap;
 }
 
 #times div {
     color: #fafafa;
-    background-color: rgba(0, 0, 0, .6); /*improve contrast between overlay and background text*/
+    background-color: rgba(0, 0, 0, .6);
     padding: 15px;
     text-align: center;
-
-    /*This will not wrap on screens of less than 400px wide.
-    Each div will expand to fill the available space on its row*/
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-
-    /*Creates a grid of meetup time dives over the background image */
-    border: 2px solid #fafafa;
-
-
+    /* Creates a grid of meetup time dives over the background image */
+    border: 2px solid white;
 }
 
 #times h3 {
-    /*Override the heading color set in general styles*/
+    /* Override the heading colour set in general styles */
     color: #fafafa;
 }
 
-/*Gallery Page */
-
-/*we need a media query to change this on larger screens otherwise the images will be very big on large screens */
+/* Gallery page */
 #photos img {
-    width: 100%; /*stops images overflowing to side */
+    width: 100%;
     line-height: 1em;
 }
 
-/*By default, the images in here are inline elements, which are treated like text.
-Text has an automatic line height to vertically space out the lines,
-which is causing this white space.
-
-0So to fix that, we'll set the line-height on the photos div to 0, and now when we
-go back to the preview, that line is gone.
-*/
-
 #photos {
- line-height: 0;
+    line-height: 0;
 }
 
+/* Form */
 #signup {
     background-image: url("../images/signup-image.webp");
     background-size: cover;
@@ -257,70 +211,84 @@ go back to the preview, that line is gone.
 }
 
 
-#signup-form{
-   color:#ffffff;
-   background-color: rgba(60,60,60,0.6);
-   padding: 30px;
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+    display: inline;
 }
-/*
-#signup .text-input{
-   margin: 5px 20px 0px;
-   color: #fafafa;
-   border:1px solid #fafafa;
-   border-radius: 2px;
-   padding-left: 25px;
-   width: 100%;
-   padding:0 5px;
-   
-
-}*/
 
 
-/*Footer*/
-#social-networks{
-    text-align: center; /*as our icons are basically our font, this will center them */
-    padding: 20px 0; /*Add vertical breathing space above and below icons */
-    display: flex; /*space our icons evenly along the footer */
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
+}
+
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
     justify-content: space-evenly;
-    list-style-type: none; /*gets rid of bullets beside icons */
+    list-style-type: none;
 }
-
-/* Font Awesom uses i class for icons so we need to style the icons so we target the i's that are direct desendants of the social-networks */
 
 #social-networks i {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
-
 }
 
-
-/*Media query: large or landscape phones (576px and up) */
-@media screen  and (min-width:576px){
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
     #photos {
-        column-count: 2; /*this property tells the browser to display the content
-        of the selected element in columns.
-        The value we give it, indicates how many columns should be used. */
-
-        column-gap: 0; /*we dont want a gap */
+        column-count: 2;
+        column-gap: 0;
     }
 }
 
-
-/*Media query: tablets and larger (768px and up) */
-@media screen  and (min-width:768px) {
-
-    /*Header*/
-    nav{
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
         display: block;
-        position: relative;  /* to put in back inside header*/
+        position: relative;
         box-shadow: none;
-        width: fit-content;  /* So it doesnt take up all the header*/
-        padding-right: 5rem;
+        width: fit-content;
+        padding-right: 1rem;
     }
 
-    #menu{
-        display: flex; /* puts links in a row */
+    #menu {
+        display: flex;
     }
 
     #menu > li {
@@ -333,18 +301,17 @@ go back to the preview, that line is gone.
 
     #logo {
         font-size: 280%;
-        line-height: 75px; /* give more space at top */
+        line-height: 75px;
         margin: 0 0.5rem;
     }
 
-    /*Main content*/
-    main{
-        /* Push main content down to accomodate larger header */
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
-
     }
 
-      /*Hero*/
+    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
@@ -352,12 +319,10 @@ go back to the preview, that line is gone.
 
     /* Reasons section */
     #benefits-physical,
-    #benefits-mental 
-    {
+    #benefits-mental {
         display: flex;
         flex-direction: column;
         width: 100%;
-
     }
 
     #benefits-physical > div,
@@ -365,57 +330,126 @@ go back to the preview, that line is gone.
         width: 75%;
     }
 
-    #benefits-mental > div{
+    #benefits-mental > div {
         text-align: end;
         align-self: flex-end;
     }
 
+    /* Gallery */
     #photos {
         column-count: 3;
     }
 
+    /* Form */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
 }
 
-
-@media screen and (min-width:992px){
-
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
     #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
     }
 
+    /* Gallery */
     #photos {
         column-count: 4;
     }
 }
 
-@media screen and (min-width:1200px){
-    /*reasons section */
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
     }
+
     #benefits > div {
         flex: 1;
     }
 
-    #benefits-image{
-        order: 0;
+    #benefits-image {
+        order: 0
     }
 
     #benefits-mental {
         order: 1;
-
-
     }
 
     #benefits-mental > div {
         align-self: flex-start;
-
     }
 
     #benefits-physical > div {
         align-self: flex-end;
     }
+    
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
 
-   
+
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+    display: inline;
+}
+
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
+}
 }
