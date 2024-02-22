@@ -39,7 +39,7 @@ h1, h2, h3 {
 }
 header {
     background-color: #ffffff;
-    padding:0 1rem; /*stops text from sticking to side*/
+    padding:0 2rem; /*stops text from sticking to side*/
     position: fixed; /*so it waits at top*/
     z-index: 99; /* so it waits on top of any other items with a z index */
     width: 100%; /*to fit width of screen*/
@@ -316,7 +316,7 @@ go back to the preview, that line is gone.
         position: relative;  /* to put in back inside header*/
         box-shadow: none;
         width: fit-content;  /* So it doesnt take up all the header*/
-        padding-right: 1rem;
+        padding-right: 5rem;
     }
 
     #menu{
